@@ -1,4 +1,4 @@
-%define ver  0.10.14
+%define ver  0.10.17
 %define rel  1
 %define jobs 2
 
@@ -12,7 +12,7 @@ URL:           http://nodejs.org
 
 Source0:       http://nodejs.org/dist/node-v%{version}.tar.gz
 BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
-BuildRequires: python >= 2.6, openssl-devel, gcc-c++
+BuildRequires: python26 >= 2.6, openssl-devel, gcc-c++
 
 Provides: nodejs
 Obsoletes: nodejs
@@ -27,6 +27,7 @@ the architectures of many Internet applications.
 
 %build
 export JOBS=%{jobs}
+
 python ./configure --prefix=/usr
 make
 
@@ -48,6 +49,9 @@ rm -rf %{buildroot}
 /usr/lib/dtrace/node.d
 
 %changelog
+* Fri August 28 2013 John Alfaro <john@thealfaros.com> 0.10.17-1
+- RPM using upstream v0.10.17
+- Updated changed python26 to python for CentOS 5.9
 * Fri Jul 26 2013 Jordan Conway <jordan@jordanconway.com> 0.10.14-1
 - RPM using upstream v0.10.14
 * Wed Jul 10 2013 Jordan Conway <jordan@jordanconway.com> 0.10.13-1
