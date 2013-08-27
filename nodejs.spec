@@ -49,7 +49,7 @@ rm -rf %{buildroot}
 /usr/lib/dtrace/node.d
 
 %changelog
-* Fri August 28 2013 John Alfaro <john@thealfaros.com> 0.10.17-1
+* Fri Aug 28 2013 John Alfaro <john@thealfaros.com> 0.10.17-1
 - RPM using upstream v0.10.17
 - Updated changed python26 to python for CentOS 5.9
 * Fri Jul 26 2013 Jordan Conway <jordan@jordanconway.com> 0.10.14-1
