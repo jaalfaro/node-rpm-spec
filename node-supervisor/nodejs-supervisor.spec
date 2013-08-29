@@ -36,7 +36,7 @@ ln -s %{nodejs_sitelib}/%{npm_name}/lib/cli-wrapper.js %{buildroot}%{_bindir}/su
 
 # Create man pages
 mkdir -p %{buildroot}%{_mandir}/man1
-%{buildroot}%{nodejs_sitelib}/%{npm_name}/lib/cli-wrapper.js -h > helpfile
+node %{buildroot}%{nodejs_sitelib}/%{npm_name}/lib/cli-wrapper.js -h > helpfile
 txt2man -P node-supervisor -t node-supervisor -r %{version} helpfile > %{buildroot}%{_mandir}/man1/node-supervisor.1
 txt2man -P supervisor -t supervisor -r %{version} helpfile > %{buildroot}%{_mandir}/man1/supervisor.1
 rm -f helpfile
