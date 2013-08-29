@@ -1,6 +1,6 @@
 %global npm_name supervisor
 # nodejs binary
-%__nodejs %{_bindir}/node
+%define __nodejs %{_bindir}/node
 
 # nodejs library directory
 %nodejs_sitelib %{_prefix}/lib/node_modules
@@ -32,7 +32,6 @@
 
 # no-op macro to allow spec compatibility with EPEL
 %nodejs_find_provides_and_requires %{nil}
-
 Summary:       A supervisor program for running nodejs programs
 Name:          nodejs-%{npm_name}
 Version:       0.5.5
