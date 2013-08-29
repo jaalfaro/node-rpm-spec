@@ -30,7 +30,7 @@ mkdir -p %{buildroot}%{nodejs_sitelib}/%{npm_name}
 cp -pr lib package.json %{buildroot}%{nodejs_sitelib}/%{npm_name}
 
 # Setup Binaries
-mkdir %{buildroot}%{_bindir}
+mkdir -p %{buildroot}%{_bindir}
 ln -s %{nodejs_sitelib}/%{npm_name}/lib/cli-wrapper.js %{buildroot}%{_bindir}/node-supervisor
 ln -s %{nodejs_sitelib}/%{npm_name}/lib/cli-wrapper.js %{buildroot}%{_bindir}/supervisor
 
