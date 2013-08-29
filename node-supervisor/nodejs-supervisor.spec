@@ -8,6 +8,7 @@ Group:         System Environment/Libraries
 License:       MIT
 URL:           https://github.com/isaacs/node-supervisor
 Source0:       http://registry.npmjs.org/%{npm_name}/-/%{npm_name}-%{version}.tgz
+BuildRoot:     %{_tmppath}/%{name}-%{version}-%{release}-root-%(%{__id_u} -n)
 BuildRequires: nodejs
 BuildRequires: txt2man
 BuildArch:     noarch
