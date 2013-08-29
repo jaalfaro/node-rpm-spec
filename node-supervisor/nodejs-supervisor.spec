@@ -3,7 +3,7 @@
 Summary:       A supervisor program for running nodejs programs
 Name:          nodejs-%{npm_name}
 Version:       0.5.5
-Release:       3%{?dist}
+Release:       1%{?dist}
 Group:         System Environment/Libraries
 License:       MIT
 URL:           https://github.com/isaacs/node-supervisor
@@ -13,7 +13,7 @@ Source0:       http://registry.npmjs.org/%{npm_name}/-/%{npm_name}-%{version}.tg
 #   the file should be in the tarball
 # https://raw.github.com/isaacs/node-supervisor/master/LICENSE
 SOURCE1:       nodejs-supervisor-LICENSE
-BuildRequires: nodejs-devel
+BuildRequires: nodejs
 BuildRequires: txt2man
 BuildArch:     noarch
 
