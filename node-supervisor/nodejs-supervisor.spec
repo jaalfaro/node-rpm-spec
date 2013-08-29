@@ -8,11 +8,6 @@ Group:         System Environment/Libraries
 License:       MIT
 URL:           https://github.com/isaacs/node-supervisor
 Source0:       http://registry.npmjs.org/%{npm_name}/-/%{npm_name}-%{version}.tgz
-# They have added a LICENSE file, but not updated the package
-# We are including their LICENSE file until the next version, when
-#   the file should be in the tarball
-# https://raw.github.com/isaacs/node-supervisor/master/LICENSE
-SOURCE1:       nodejs-supervisor-LICENSE
 BuildRequires: nodejs
 BuildRequires: txt2man
 BuildArch:     noarch
@@ -26,8 +21,6 @@ and without a whole new require system.
 
 %prep
 %setup -q -n package
-
-cp -pr %{SOURCE1} LICENSE
 
 %build
 #nothing to do
