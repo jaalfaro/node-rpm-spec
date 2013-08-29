@@ -1,38 +1,4 @@
 %global npm_name supervisor
-# nodejs binary
-%define __nodejs %{_bindir}/node
-
-# nodejs library directory
-%define nodejs_sitelib %{_prefix}/lib/node_modules
-
-#arch specific library directory
-#for future-proofing only; we don't do multilib
-%define nodejs_sitearch %{nodejs_sitelib}
-
-# currently installed nodejs version
-%define nodejs_version %(%{__nodejs} -v | sed s/v//)
-
-# symlink dependencies so `npm link` works
-# this should be run in every module's %%install section
-# pass --check to work in the current directory instead of the buildroot
-# pass --no-devdeps to ignore devDependencies when --check is used
-%define nodejs_symlink_deps %{_rpmconfigdir}/nodejs-symlink-deps %{nodejs_sitelib}
-
-# patch package.json to fix a dependency
-# see `man npm-json` for details on writing dependencies for package.json files
-# e.g. `%%nodejs_fixdep frobber` makes any version of frobber do
-#      `%%nodejs_fixdep frobber '>1.0'` requires frobber > 1.0
-#      `%%nodejs_fixdep -r frobber removes the frobber dep
-%define nodejs_fixdep %{_rpmconfigdir}/nodejs-fixdep
-
-# macro to filter unwanted provides from Node.js binary native modules
-%define nodejs_default_filter %{expand: \
-%global __provides_exclude_from ^%{nodejs_sitearch}/.*\\.node$
-}
-
-# no-op macro to allow spec compatibility with EPEL
-%define nodejs_find_provides_and_requires %{nil}
-
 
 Summary:       A supervisor program for running nodejs programs
 Name:          nodejs-%{npm_name}
