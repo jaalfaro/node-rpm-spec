@@ -1,9 +1,10 @@
 #!/bin/bash
-VERSION=0.5.5
+VERSION=0.5.6
 
 rm -Rf ~/rpmbuild
 mkdir -p ~/rpmbuild/BUILD ~/rpmbuild/RPMS ~/rpmbuild/RPMS/i386 ~/rpmbuild/RPMS/noarch ~/rpmbuild/RPMS/x86_64 ~/rpmbuild/RPMS/ ~/rpmbuild/SOURCES ~/rpmbuild/SPECS ~/rpmbuild/SRPMS
-wget -P ~/.rpmmacros https://raw.github.com/jaalfaro/node-rpm-spec/master/node-supervisor/macros.nodejs
+wget -P ~/ https://raw.github.com/jaalfaro/node-rpm-spec/master/node-supervisor/macros.nodejs
+mv macros.nodejs .rpmmacros
 echo '%_topdir %(echo $HOME)/rpmbuild' >> ~/.rpmmacros
 wget -P ~/rpmbuild/SOURCES http://registry.npmjs.org/supervisor/-/supervisor-$VERSION.tgz
 wget -P ~/rpmbuild/SPECS https://raw.github.com/jaalfaro/node-rpm-spec/master/node-supervisor/nodejs-supervisor.spec

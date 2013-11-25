@@ -2,7 +2,7 @@
 
 Summary:       A supervisor program for running nodejs programs
 Name:          nodejs-%{npm_name}
-Version:       0.5.5
+Version:       0.5.6
 Release:       1%{?dist}
 Group:         System Environment/Libraries
 License:       MIT
@@ -50,6 +50,9 @@ rm -f helpfile
 %{_mandir}/man1/*
 
 %changelog
+* Wed Nov 25 2013 John Alfaro <john@thealfaros.com> - 0.5.6-1
+- Bump release number up
+
 * Wed Aug 29 2013 John Alfaro <john@thealfaros.com> - 0.5.5-1
 - Bump release number up
 
