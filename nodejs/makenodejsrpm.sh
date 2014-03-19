@@ -1,5 +1,5 @@
 #!/bin/bash
-VERSION=v0.10.22
+VERSION=v0.10.26
 
 rm -Rf ~/rpmbuild
 mkdir -p ~/rpmbuild/BUILD ~/rpmbuild/RPMS ~/rpmbuild/RPMS/i386 ~/rpmbuild/RPMS/noarch ~/rpmbuild/RPMS/x86_64 ~/rpmbuild/RPMS/ ~/rpmbuild/SOURCES ~/rpmbuild/SPECS ~/rpmbuild/SRPMS

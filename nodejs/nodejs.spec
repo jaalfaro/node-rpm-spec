@@ -1,4 +1,4 @@
-%define ver  0.10.22
+%define ver  0.10.26
 %define rel  1
 %define jobs 2
 
@@ -49,6 +49,8 @@ rm -rf %{buildroot}
 /usr/lib/dtrace/node.d
 
 %changelog
+* Fri Mar 19 2014 John Alfaro <john@thealfaros.com> 0.10.26-1
+- RPM using upstream v0.10.26
 * Fri Nov 25 2013 John Alfaro <john@thealfaros.com> 0.10.22-1
 - RPM using upstream v0.10.22
 * Fri Aug 28 2013 John Alfaro <john@thealfaros.com> 0.10.17-1
