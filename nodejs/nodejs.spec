@@ -47,6 +47,7 @@ rm -rf %{buildroot}
 /usr/share/man/man1/node.1.gz
 /usr/lib/node_modules
 /usr/lib/dtrace/node.d
+/usr/include/node
 
 %changelog
 * Fri Mar 19 2014 John Alfaro <john@thealfaros.com> 0.10.26-1
